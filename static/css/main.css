@@ -1,0 +1,28 @@
+nav .brand-logo {
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.section-main {
+  margin: 0px 20px;
+}
+
+.section-main .inputs {
+  max-width: 500px;
+}
+
+.section-main .explanation {
+  max-width: 500px;
+}
+
+.progress-wrapper {
+  height: 4px;
+}
+
+.progress-wrapper .progress {
+  margin: 0px;
+}
+
+.italic {
+  font-style: italic;
+}

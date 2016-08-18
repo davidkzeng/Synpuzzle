@@ -1,0 +1,5 @@
+node_modules
+*.sublime-project
+*.sublime-workspace
+redis-3.2.3
+*.rdb

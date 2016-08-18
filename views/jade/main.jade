@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    link(rel='stylesheet', href="http://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel='stylesheet', href='/static/third_party/materialize.min.css', type='text/css')
+    link(rel='stylesheet', href='/static/css/main.css', type='text/css')
+
+    script(type='text/javascript', src='/static/third_party/underscore-min.js')
+    script(type='text/javascript', src='/static/third_party/angular.min.js')
+    script(type='text/javascript', src='/static/third_party/jquery-3.1.0.min.js')
+    script(type='text/javascript', src='/static/third_party/materialize.min.js')
+    script(type='text/javascript', src='/static/js/app.js')
+  body(ng-app='main', ng-controller='MainController')
+    nav
+      .nav-wrapper
+        a.brand-logo(href='#') Puzzle Word Solver
+    .progress-wrapper
+      .progress(ng-if='showLoading')
+        .indeterminate
+    .section-main.row
+      form.inputs.col.s12.l6
+        .input-field.col.s6
+          input(placeholder='Synonyms', ng-model='synonymString')
+        .input-field.col.s6
+          input(placeholder='Regex', ng-model='regexString')
+        a.btn.col.s4.offset-s8(ng-click='matchWords()') Find Matches
+      .explanation.col.s12.l6
+        .card-panel Input synonyms as a comma separated list.
+          .italic (If left blank, matches all words in database)
+          ul
+            li Any word that matches at least one synonym is considered.
+            li Words are sorted by how well they match the synonym(s).
+        .card-panel Input any regex.
+          .italic (If left blank, will match all words)
+          ul
+            li _ , - are converted to [a-z].
+            li.italic (Compound word dashes have been replaced with spaces)
+            li
+              | This tool is designed to be run against a list of synonym candidates.
+              | It is not optimized for regex matching against the entire database of words.
+      .results.col.s12
+          .result.col.s3(ng-repeat='word in topResults') {{word}} ({{searchResults[word]}})
