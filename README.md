@@ -1,6 +1,6 @@
 # Synpuzzle
 
-Similar to something like morewords.com but supports the addition of synonyms. Not optimized for use without synonyms.
+Similar to something like morewords.com but supports the addition of synonyms. Not optimized for use without synonyms to limit search space.
 
 Steps to setup:
 
