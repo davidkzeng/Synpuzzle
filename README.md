@@ -9,3 +9,6 @@ Steps to setup:
 3. Run npm install in directory.
 4. Run node initialize_word_db.js (This can use a lot of memory)
 5. Run node app.js
+
+
+![Demo](https://raw.githubusercontent.com/davidz-eng/Synpuzzle/master/Picture.png)
